@@ -1,0 +1,30 @@
+{
+  "CurrentVersion": "1",
+  "ComponentsLocations": [
+    "components"
+  ],
+  "Apps": {
+    "tickapp": {
+      "ActiveServices": ["cron"]
+    }
+  },
+  "Injections": {},
+  "ComponentsConfig": {
+    "core": {
+      "croncleanupevent": "* */5 * * * *",
+      "cronbackupevent": "0 */5 * * * *",
+      "baseurl": "http://localhost:8080/"
+    }
+  },
+  "DefaultComponents": ["tick"],
+  "Entities": {
+    "default": {
+      "provider": "sqlite",
+      "databasepath": "./tickdb.db"
+    }
+  },
+  "InactiveComponents": [],
+  "GlobalTemplateVars": {
+    "global-sitename": "Simple tick job app"
+  }
+}
